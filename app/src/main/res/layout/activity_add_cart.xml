@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:layout_height="match_parent"
+    tools:context=".AddCartActivity">
+
+    <ImageView
+        android:layout_weight="3"
+        android:src="@drawable/laptop_dell"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+         />
+
+<!--    Price-->
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$999"
+            />
+
+        <TextView
+            android:text=" / Sản phẩm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+<!--    Description-->
+    <LinearLayout
+        android:layout_weight="3"
+        android:padding="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginBottom="24dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mô tả"
+            />
+
+        <TextView
+            android:text="Thiết kế hình viên thuốc thay thế “notch tai thỏ”"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+<!--    Quantity-->
+    <LinearLayout
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:textSize="18dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Số lượng"
+            />
+
+        <ImageButton
+            android:elevation="8dp"
+            android:padding="6dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/bg_radius_fill_orange"
+            android:src="@drawable/ic_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:padding="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:background="@drawable/bg_radius_outline_orange"
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:elevation="8dp"
+            android:padding="6dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/bg_radius_fill_orange"
+            android:src="@drawable/ic_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+<!--    Add to Shopping cart-->
+    <LinearLayout
+        android:layout_weight="2.7"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="24dp"
+        android:background="@drawable/bg_layout_radius_not_end"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+        <TextView
+            android:textSize="18dp"
+            android:text="Tổng cộng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:padding="8dp"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:text="1000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="#F44336"
+            android:text="Thêm vào giỏ hàng"
+            android:background="@drawable/bg_radius_fill_orange"
+            android:drawableEnd="@drawable/ic_add_cart"/>
+    </LinearLayout>
+
+
+</LinearLayout>

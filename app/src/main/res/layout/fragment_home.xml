@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:weightSum="10"
+    tools:context=".fragment.HomeFragment">
+
+<!--    Say hi-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_account_username"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="34dp"
+            android:layout_weight="7.5"
+            android:gravity="center_vertical"
+            android:text="Hi, User!"
+            android:textColor="@android:color/holo_blue_bright"
+            android:textStyle="bold|italic" />
+
+        <ImageButton
+            android:id="@+id/btn_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2.5"
+            android:backgroundTint="@android:color/transparent"
+            android:src="@drawable/ic_person" />
+
+    </LinearLayout>
+
+<!--    Category Computer -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_computer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_weight="3"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:weightSum="5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_gradient">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_weight="3"
+                android:layout_margin="24dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="Computer"
+                    android:layout_marginBottom="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textColor="@color/white"
+                    android:text="Desktop , Laptop , Macbook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <ImageView
+                android:src="@drawable/banner"
+                android:layout_margin="8dp"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+<!--    Category Smart Phone-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_phone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_weight="3"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:weightSum="5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_gradient_light">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_weight="3"
+                android:layout_margin="24dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="Smart phone"
+                    android:layout_marginBottom="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textColor="@color/white"
+                    android:text="Android , IPhone..."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <ImageView
+                android:src="@drawable/banner_phone"
+                android:layout_margin="8dp"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+<!--    Category Other-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_other"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_weight="3"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:weightSum="5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_gradient_bright">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_weight="3"
+                android:layout_margin="24dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="Other"
+                    android:layout_marginBottom="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textColor="@color/white"
+                    android:text="Tivi , Smart Watch ..."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <ImageView
+                android:src="@drawable/banner_other"
+                android:layout_margin="8dp"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</LinearLayout>
