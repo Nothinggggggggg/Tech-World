@@ -1,5 +1,7 @@
-package com.android.developer.designtechworld.fragment;
+package com.android.developer.techworld.fragment;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,16 +10,14 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import com.android.developer.designtechworld.R;
-import com.android.developer.designtechworld.adapter.OrderAdapter;
-import com.android.developer.designtechworld.adapter.ProductAdapter;
-import com.android.developer.designtechworld.model.Order;
-import com.android.developer.designtechworld.model.Product;
+import com.android.developer.techworld.DAO.OrderDAO;
+import com.android.developer.techworld.MainActivity;
+import com.android.developer.techworld.R;
+import com.android.developer.techworld.adapter.OrderAdapter;
+import com.android.developer.techworld.model.Order;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class OrderFragment extends Fragment {
@@ -28,8 +28,14 @@ public class OrderFragment extends Fragment {
     }
     //Var
     private OrderAdapter adapter;
+    private OrderDAO orderDAO;
+    private SharedPreferences sharedPreferences;
     private void var(){
         adapter = new OrderAdapter(getContext());
+
+        orderDAO = new OrderDAO(getContext());
+
+        sharedPreferences = getContext().getSharedPreferences(MainActivity.PREFS_FILE, Context.MODE_PRIVATE);
     }
     //Launcher UI
     private void launcherUI(){
@@ -48,13 +54,7 @@ public class OrderFragment extends Fragment {
         var();
 
         //Recycler View
-        List<Order> list = new ArrayList<>();
-        list.add(new Order());
-        list.add(new Order());
-        list.add(new Order());
-        list.add(new Order());
-        list.add(new Order());
-        refreshUI(list);
+        refreshUI(orderDAO.getDatabase_Customer(sharedPreferences.getString("ID","")));
 
         //Launcher UI
         launcherUI();
@@ -63,7 +63,7 @@ public class OrderFragment extends Fragment {
         return view;
     }
 
-    private void refreshUI(List<Order> list) {
+    private void refreshUI(ArrayList<Order> list) {
         adapter.setData(list);
         rev_order.setLayoutManager(new LinearLayoutManager(getContext()));
         rev_order.setAdapter(adapter);

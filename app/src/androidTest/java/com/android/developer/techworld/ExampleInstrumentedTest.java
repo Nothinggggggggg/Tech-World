@@ -1,4 +1,4 @@
-package com.android.developer.designtechworld;
+package com.android.developer.techworld;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.android.developer.designtechworld", appContext.getPackageName());
+        assertEquals("com.android.developer.techworld", appContext.getPackageName());
     }
 }

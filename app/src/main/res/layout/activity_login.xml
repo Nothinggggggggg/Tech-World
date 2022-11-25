@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_margin="48dp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ĐĂNG NHẬP"
+        android:textColor="#F44336"
+        android:textSize="30sp"
+        android:gravity="center"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:text="admin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Nhập username"
+            android:id="@+id/edt_account_id"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        app:endIconMode="password_toggle"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:text="group3"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Nhập password"
+            android:id="@+id/edt_account_password"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/chk_remember"
+        android:checked="true"
+        android:layout_width="match_parent"
+        android:text="Remember"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập"
+        android:id="@+id/btn_login"/>
+
+</LinearLayout>

@@ -9,6 +9,7 @@
 
 
     <LinearLayout
+        android:id="@+id/layout_order"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -21,11 +22,12 @@
             android:weightSum="10">
 
             <ImageView
+                android:id="@+id/product_banner"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
                 android:scaleType="fitCenter"
-                android:src="@drawable/laptop_dell" />
+                android:src="@drawable/computer_laptop_dell" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -49,6 +51,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/product_price"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="$ 999" />
@@ -67,7 +70,10 @@
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
 
+
+
                         <ImageButton
+                            android:id="@+id/btn_down"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/bg_radius_fill_orange"
@@ -77,6 +83,7 @@
                             android:src="@drawable/ic_remove" />
 
                         <TextView
+                            android:id="@+id/order_quantity"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="16dp"
@@ -88,6 +95,7 @@
                             android:textStyle="bold" />
 
                         <ImageButton
+                            android:id="@+id/btn_up"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/bg_radius_fill_orange"
@@ -99,101 +107,139 @@
                     </LinearLayout>
 
                     <TextView
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                        android:textColor="#F44336"
+                        android:id="@+id/order_total"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:text="$ 999"
-                        android:textSize="16sp"
                         android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="48dp"
+            android:background="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/btn_customer_order"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_radius_fill_orange"
+            android:text="Đặt hàng"
+            app:backgroundTint="#F44336" />
+
+
+        <!--        Delivery-->
+        <LinearLayout
+            android:id="@+id/layout_delivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/order_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableStart="@drawable/ic_ship"
+                android:padding="16dp"
+                android:text="Giao hàng thành công"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/layout_delivery_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <!--            Name Customer-->
+                <LinearLayout
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Họ tên"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/account_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 999" />
+                </LinearLayout>
+
+                <!--            Phone Customer-->
+                <LinearLayout
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Số điện thoại"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/account_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 999" />
+                </LinearLayout>
+
+                <!--            Address Customer-->
+                <LinearLayout
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Địa chỉ giao hàng"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/account_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 999" />
                 </LinearLayout>
             </LinearLayout>
 
 
+
         </LinearLayout>
 
-        <View
-            android:layout_marginStart="48dp"
-            android:layout_marginEnd="48dp"
-            android:background="@android:color/darker_gray"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"/>
 
-<!--    Buy    -->
-        <LinearLayout
-            android:id="@+id/layout_order"
-            android:visibility="gone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Phí vận chuyển"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="$ 0"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Tổng tiền"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="$ 999"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <Button
-                android:layout_marginBottom="16dp"
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_radius_fill_orange"
-                android:text="Đặt hàng"
-                app:backgroundTint="#F44336" />
-        </LinearLayout>
-
-        <View
-            android:layout_marginStart="48dp"
-            android:layout_marginEnd="48dp"
-            android:background="@android:color/darker_gray"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"/>
-
-        <TextView
-            android:padding="16dp"
-            android:drawableStart="@drawable/ic_ship"
-            android:textColor="@android:color/holo_blue_bright"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Giao hàng thành công"
-            android:textStyle="bold" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

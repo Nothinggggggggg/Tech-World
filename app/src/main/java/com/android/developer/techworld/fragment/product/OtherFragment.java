@@ -1,4 +1,4 @@
-package com.android.developer.designtechworld.fragment.product;
+package com.android.developer.techworld.fragment.product;
 
 import android.os.Bundle;
 
@@ -10,15 +10,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.android.developer.designtechworld.R;
-import com.android.developer.designtechworld.adapter.ProductAdapter;
-import com.android.developer.designtechworld.model.Product;
+import com.android.developer.techworld.DAO.ProductDAO;
+import com.android.developer.techworld.R;
+import com.android.developer.techworld.adapter.ProductAdapter;
+import com.android.developer.techworld.model.Product;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
-public class SmartPhoneFragment extends Fragment {
+public class OtherFragment extends Fragment {
     //Widget
     private RecyclerView rev_product;
     private void initUI(View view){
@@ -26,8 +26,10 @@ public class SmartPhoneFragment extends Fragment {
     }
     //Var
     private ProductAdapter adapter;
+    private ProductDAO productDAO;
     private void var(){
         adapter = new ProductAdapter(getContext());
+        productDAO = new ProductDAO(getContext());
     }
     //Launcher UI
     private void launcherUI(){
@@ -38,21 +40,18 @@ public class SmartPhoneFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_smart_phone, container, false);
+        View view = inflater.inflate(R.layout.fragment_other, container, false);
 
         //Widget - Var
         initUI(view);
         var();
 
         //Recycler View
-        List<Product> list = new ArrayList<>();
-        list.add(new Product("ROG G513IH","8/512GB",1100));
-        list.add(new Product("ROG G513IH","8/512GB",1100));
-        list.add(new Product("ROG G513IH","8/512GB",1100));
-        list.add(new Product("ROG G513IH","8/512GB",1100));
-        list.add(new Product("ROG G513IH","8/512GB",1100));
-        list.add(new Product("ROG G513IH","8/512GB",1100));
-        refreshUI(list);
+        if(productDAO.getDatabase_Other().size() <= 0){
+            productDAO.insertDatabase(new Product(R.drawable.other_tv_lg_qled,"LG QLED Tivi","65 inch - 2K","Thiết kế Infinity One màn hình vô cực nâng tầm trải nghiệm xem\n",2100,3));
+        }
+
+        refreshUI(productDAO.getDatabase_Other());
 
         //Launcher UI
         launcherUI();
@@ -61,10 +60,9 @@ public class SmartPhoneFragment extends Fragment {
         return view;
     }
 
-    private void refreshUI(List<Product> list) {
+    private void refreshUI(ArrayList<Product> list) {
         adapter.setData(list);
         rev_product.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
         rev_product.setAdapter(adapter);
     }
-
 }

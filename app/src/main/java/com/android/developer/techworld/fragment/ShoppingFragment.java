@@ -1,18 +1,15 @@
-package com.android.developer.designtechworld.fragment;
+package com.android.developer.techworld.fragment;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.android.developer.designtechworld.R;
-import com.android.developer.designtechworld.adapter.PagerProductAdapter;
+import com.android.developer.techworld.R;
+import com.android.developer.techworld.adapter.PagerProductAdapter;
 
 
 public class ShoppingFragment extends Fragment {

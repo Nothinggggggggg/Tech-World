@@ -1,4 +1,4 @@
-package com.android.developer.designtechworld;
+package com.android.developer.techworld;
 
 import org.junit.Test;
 

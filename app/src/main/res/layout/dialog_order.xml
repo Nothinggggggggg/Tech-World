@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    >
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="THÔNG TIN ĐẶT HÀNG"
+        android:textColor="#F44336"
+        android:textSize="30sp"
+        android:gravity="center"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_margin="8dp"
+        android:hint="Họ tên người nhận"
+        android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/account_name"
+            android:inputType="textPersonName"
+            android:layout_height="match_parent"
+           />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_margin="8dp"
+        android:hint="Số điện thoại"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/account_phone"
+            android:inputType="phone"
+            android:layout_height="match_parent"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_margin="8dp"
+        android:hint="Địa chỉ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/account_address"
+            android:layout_height="match_parent"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+</LinearLayout>

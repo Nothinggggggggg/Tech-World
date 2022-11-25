@@ -7,15 +7,16 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
+        android:id="@+id/layout_product"
         android:padding="16dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
+            android:id="@+id/product_banner"
             android:adjustViewBounds="true"
             android:padding="16dp"
-            android:src="@drawable/laptop_dell"
             android:scaleType="fitCenter"
             android:layout_width="match_parent"
             android:maxHeight="200dp"
@@ -26,7 +27,6 @@
             android:layout_margin="16dp"
             android:textSize="24sp"
             android:gravity="center"
-            android:text="$9999"
             android:textColor="#F44336"
             android:id="@+id/product_price"
             android:layout_width="match_parent"
@@ -37,14 +37,12 @@
             android:textColor="@android:color/holo_blue_bright"
             android:textStyle="bold"
             android:layout_margin="8dp"
-            android:text="IPhone 14 Pro Max"
             android:id="@+id/product_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <TextView
             android:layout_margin="8dp"
-            android:text="6/256GB"
             android:id="@+id/product_config"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

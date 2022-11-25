@@ -1,4 +1,4 @@
-package com.android.developer.designtechworld;
+package com.android.developer.techworld;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,14 +8,15 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.WindowManager;
 
-import com.android.developer.designtechworld.fragment.AccountFragment;
-import com.android.developer.designtechworld.fragment.HomeFragment;
-import com.android.developer.designtechworld.fragment.OrderFragment;
-import com.android.developer.designtechworld.fragment.ShoppingFragment;
+import com.android.developer.techworld.fragment.AccountFragment;
+import com.android.developer.techworld.fragment.HomeFragment;
+import com.android.developer.techworld.fragment.OrderFragment;
+import com.android.developer.techworld.fragment.ShoppingFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String PREFS_FILE = "PREFS_FILE.MY_APP";
     //Widget
     private BottomNavigationView bottom_nav;
     private void initUI(){
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         initUI();
         var();
 
+       
 
         //Switch Screen
         bottom_nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

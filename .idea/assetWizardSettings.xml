@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/D:/ProgramFiles/Android/sdk/icons/material/materialiconsoutlined/local_shipping/outline_local_shipping_24.xml" />
+                                      <entry key="url" value="file:/D:/ProgramFiles/Android/sdk/icons/material/materialiconsoutlined/keyboard_arrow_down/outline_keyboard_arrow_down_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,7 +28,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_ship" />
+                            <entry key="outputName" value="ic_down" />
                             <entry key="sourceFile" value="C:\Users\ahihi\Documents\@AndroidStudio\FPoly\@Project1\Design" />
                           </map>
                         </option>
